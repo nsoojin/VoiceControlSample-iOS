@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F556C78823C07987006A1441 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; };
+		F556C78923C07987006A1441 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F55ABB7623C0892900265469 /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */; };
+		F55ABB7723C0892B00265469 /* VoiceControl+JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */; };
+		F55ABB7823C0893100265469 /* Jarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79523C032B900E3615D /* Jarvis.swift */; };
+		F55ABB7923C0893100265469 /* JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79723C032C800E3615D /* JarvisDelegate.swift */; };
+		F55ABB7A23C0893400265469 /* VoiceAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75123C0430D006A1441 /* VoiceAgentView.swift */; };
+		F55ABB7B23C0893400265469 /* VoiceAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F556C75023C0430B006A1441 /* VoiceAgentView.xib */; };
+		F55ABB7C23C0893900265469 /* VoiceStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70623BF7C0B00E3615D /* VoiceStateView.swift */; };
+		F55ABB7D23C0893900265469 /* voice.json in Resources */ = {isa = PBXBuildFile; fileRef = F581B70E23BF7C0C00E3615D /* voice.json */; };
+		F55ABB7E23C0893C00265469 /* VoiceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70C23BF7C0B00E3615D /* VoiceState.swift */; };
+		F55ABB7F23C0893C00265469 /* AttendingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70823BF7C0B00E3615D /* AttendingState.swift */; };
+		F55ABB8023C0893C00265469 /* ListeningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70923BF7C0B00E3615D /* ListeningState.swift */; };
+		F55ABB8123C0893C00265469 /* DetectingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70A23BF7C0B00E3615D /* DetectingState.swift */; };
+		F55ABB8223C0893C00265469 /* ProcessingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70B23BF7C0B00E3615D /* ProcessingState.swift */; };
+		F55ABB8323C0893C00265469 /* ReportingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70D23BF7C0B00E3615D /* ReportingState.swift */; };
+		F55ABB8423C0893F00265469 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75523C04363006A1441 /* Extensions.swift */; };
+		F55ABB8523C0894C00265469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F581B6EA23BF7BA500E3615D /* Assets.xcassets */; };
+		F581B6E223BF7B9F00E3615D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6E123BF7B9F00E3615D /* AppDelegate.swift */; };
+		F581B6E923BF7B9F00E3615D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F581B6E723BF7B9F00E3615D /* Main.storyboard */; };
+		F581B6EE23BF7BA500E3615D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F581B6EC23BF7BA500E3615D /* LaunchScreen.storyboard */; };
+		F581B75123BF9A3800E3615D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B75023BF9A3800E3615D /* SceneDelegate.swift */; };
+		F581B77323BFA27600E3615D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B77223BFA27600E3615D /* MyViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F556C78123C0776F006A1441 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F556C78923C07987006A1441 /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F556C75023C0430B006A1441 /* VoiceAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceAgentView.xib; sourceTree = "<group>"; };
+		F556C75123C0430D006A1441 /* VoiceAgentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAgentView.swift; sourceTree = "<group>"; };
+		F556C75523C04363006A1441 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F556C78223C0791A006A1441 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		F581B6DE23BF7B9F00E3615D /* VoiceControlSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceControlSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F581B6E123BF7B9F00E3615D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F581B6E823BF7B9F00E3615D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F581B6EA23BF7BA500E3615D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F581B6ED23BF7BA500E3615D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F581B6EF23BF7BA500E3615D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceControl.swift; sourceTree = "<group>"; };
+		F581B70623BF7C0B00E3615D /* VoiceStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceStateView.swift; sourceTree = "<group>"; };
+		F581B70823BF7C0B00E3615D /* AttendingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendingState.swift; sourceTree = "<group>"; };
+		F581B70923BF7C0B00E3615D /* ListeningState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListeningState.swift; sourceTree = "<group>"; };
+		F581B70A23BF7C0B00E3615D /* DetectingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectingState.swift; sourceTree = "<group>"; };
+		F581B70B23BF7C0B00E3615D /* ProcessingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessingState.swift; sourceTree = "<group>"; };
+		F581B70C23BF7C0B00E3615D /* VoiceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceState.swift; sourceTree = "<group>"; };
+		F581B70D23BF7C0B00E3615D /* ReportingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportingState.swift; sourceTree = "<group>"; };
+		F581B70E23BF7C0C00E3615D /* voice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = voice.json; sourceTree = "<group>"; };
+		F581B75023BF9A3800E3615D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F581B77223BFA27600E3615D /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		F581B79523C032B900E3615D /* Jarvis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis.swift; sourceTree = "<group>"; };
+		F581B79723C032C800E3615D /* JarvisDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisDelegate.swift; sourceTree = "<group>"; };
+		F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VoiceControl+JarvisDelegate.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F581B6DB23BF7B9F00E3615D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F556C78823C07987006A1441 /* Lottie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F556C75D23C075AB006A1441 /* VoiceControl */ = {
+			isa = PBXGroup;
+			children = (
+				F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */,
+				F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */,
+				F581B79423C0329C00E3615D /* Jarvis */,
+				F581B72323BF90E800E3615D /* VoiceAgentView */,
+				F581B70523BF7C0B00E3615D /* VoiceStateView */,
+				F556C77E23C0770D006A1441 /* Extensions */,
+			);
+			path = VoiceControl;
+			sourceTree = "<group>";
+		};
+		F556C77E23C0770D006A1441 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F556C75523C04363006A1441 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F581B6D523BF7B9F00E3615D = {
+			isa = PBXGroup;
+			children = (
+				F581B6E023BF7B9F00E3615D /* VoiceControlSample */,
+				F581B6DF23BF7B9F00E3615D /* Products */,
+				F581B72623BF947600E3615D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F581B6DF23BF7B9F00E3615D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F581B6DE23BF7B9F00E3615D /* VoiceControlSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F581B6E023BF7B9F00E3615D /* VoiceControlSample */ = {
+			isa = PBXGroup;
+			children = (
+				F581B6E123BF7B9F00E3615D /* AppDelegate.swift */,
+				F581B75023BF9A3800E3615D /* SceneDelegate.swift */,
+				F581B77223BFA27600E3615D /* MyViewController.swift */,
+				F581B6EF23BF7BA500E3615D /* Info.plist */,
+				F556C75D23C075AB006A1441 /* VoiceControl */,
+				F581B6F723BF7BD300E3615D /* Resources */,
+			);
+			path = VoiceControlSample;
+			sourceTree = "<group>";
+		};
+		F581B6F723BF7BD300E3615D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F581B6EA23BF7BA500E3615D /* Assets.xcassets */,
+				F581B6E723BF7B9F00E3615D /* Main.storyboard */,
+				F581B6EC23BF7BA500E3615D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F581B70523BF7C0B00E3615D /* VoiceStateView */ = {
+			isa = PBXGroup;
+			children = (
+				F581B70623BF7C0B00E3615D /* VoiceStateView.swift */,
+				F581B70E23BF7C0C00E3615D /* voice.json */,
+				F581B70723BF7C0B00E3615D /* States */,
+			);
+			path = VoiceStateView;
+			sourceTree = "<group>";
+		};
+		F581B70723BF7C0B00E3615D /* States */ = {
+			isa = PBXGroup;
+			children = (
+				F581B70C23BF7C0B00E3615D /* VoiceState.swift */,
+				F581B70823BF7C0B00E3615D /* AttendingState.swift */,
+				F581B70923BF7C0B00E3615D /* ListeningState.swift */,
+				F581B70A23BF7C0B00E3615D /* DetectingState.swift */,
+				F581B70B23BF7C0B00E3615D /* ProcessingState.swift */,
+				F581B70D23BF7C0B00E3615D /* ReportingState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		F581B72323BF90E800E3615D /* VoiceAgentView */ = {
+			isa = PBXGroup;
+			children = (
+				F556C75123C0430D006A1441 /* VoiceAgentView.swift */,
+				F556C75023C0430B006A1441 /* VoiceAgentView.xib */,
+			);
+			path = VoiceAgentView;
+			sourceTree = "<group>";
+		};
+		F581B72623BF947600E3615D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F556C78223C0791A006A1441 /* Lottie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F581B79423C0329C00E3615D /* Jarvis */ = {
+			isa = PBXGroup;
+			children = (
+				F581B79523C032B900E3615D /* Jarvis.swift */,
+				F581B79723C032C800E3615D /* JarvisDelegate.swift */,
+			);
+			path = Jarvis;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F581B6DD23BF7B9F00E3615D /* VoiceControlSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F581B6F223BF7BA500E3615D /* Build configuration list for PBXNativeTarget "VoiceControlSample" */;
+			buildPhases = (
+				F581B6DA23BF7B9F00E3615D /* Sources */,
+				F581B6DB23BF7B9F00E3615D /* Frameworks */,
+				F581B6DC23BF7B9F00E3615D /* Resources */,
+				F556C78123C0776F006A1441 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceControlSample;
+			productName = SpeechInput;
+			productReference = F581B6DE23BF7B9F00E3615D /* VoiceControlSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F581B6D623BF7B9F00E3615D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Soojin Ro";
+				TargetAttributes = {
+					F581B6DD23BF7B9F00E3615D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = F581B6D923BF7B9F00E3615D /* Build configuration list for PBXProject "VoiceControlSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F581B6D523BF7B9F00E3615D;
+			productRefGroup = F581B6DF23BF7B9F00E3615D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F581B6DD23BF7B9F00E3615D /* VoiceControlSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F581B6DC23BF7B9F00E3615D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55ABB7D23C0893900265469 /* voice.json in Resources */,
+				F581B6EE23BF7BA500E3615D /* LaunchScreen.storyboard in Resources */,
+				F581B6E923BF7B9F00E3615D /* Main.storyboard in Resources */,
+				F55ABB7B23C0893400265469 /* VoiceAgentView.xib in Resources */,
+				F55ABB8523C0894C00265469 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F581B6DA23BF7B9F00E3615D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55ABB7723C0892B00265469 /* VoiceControl+JarvisDelegate.swift in Sources */,
+				F55ABB7623C0892900265469 /* VoiceControl.swift in Sources */,
+				F55ABB7923C0893100265469 /* JarvisDelegate.swift in Sources */,
+				F581B75123BF9A3800E3615D /* SceneDelegate.swift in Sources */,
+				F55ABB8123C0893C00265469 /* DetectingState.swift in Sources */,
+				F581B6E223BF7B9F00E3615D /* AppDelegate.swift in Sources */,
+				F55ABB8023C0893C00265469 /* ListeningState.swift in Sources */,
+				F55ABB8323C0893C00265469 /* ReportingState.swift in Sources */,
+				F55ABB7C23C0893900265469 /* VoiceStateView.swift in Sources */,
+				F55ABB7E23C0893C00265469 /* VoiceState.swift in Sources */,
+				F55ABB7F23C0893C00265469 /* AttendingState.swift in Sources */,
+				F55ABB8423C0893F00265469 /* Extensions.swift in Sources */,
+				F581B77323BFA27600E3615D /* MyViewController.swift in Sources */,
+				F55ABB7823C0893100265469 /* Jarvis.swift in Sources */,
+				F55ABB8223C0893C00265469 /* ProcessingState.swift in Sources */,
+				F55ABB7A23C0893400265469 /* VoiceAgentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F581B6E723BF7B9F00E3615D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F581B6E823BF7B9F00E3615D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F581B6EC23BF7BA500E3615D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F581B6ED23BF7BA500E3615D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F581B6F023BF7BA500E3615D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F581B6F123BF7BA500E3615D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F581B6F323BF7BA500E3615D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/VoiceControlSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.VoiceControlSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F581B6F423BF7BA500E3615D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/VoiceControlSample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.VoiceControlSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F581B6D923BF7B9F00E3615D /* Build configuration list for PBXProject "VoiceControlSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F581B6F023BF7BA500E3615D /* Debug */,
+				F581B6F123BF7BA500E3615D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F581B6F223BF7BA500E3615D /* Build configuration list for PBXNativeTarget "VoiceControlSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F581B6F323BF7BA500E3615D /* Debug */,
+				F581B6F423BF7BA500E3615D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F581B6D623BF7B9F00E3615D /* Project object */;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MyViewController" customModule="VoiceControlSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-map" translatesAutoresizingMaskIntoConstraints="NO" id="Fy9-lU-lbw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFC-lN-eFb" customClass="VoiceControl" customModule="VoiceControlSample" customModuleProvider="target">
+                                <rect key="frame" x="316" y="72" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="aNo-Qc-wTq"/>
+                                    <constraint firstAttribute="width" constant="70" id="fiO-ZK-Xvo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fy9-lU-lbw" secondAttribute="trailing" id="2b6-Su-aTI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFC-lN-eFb" secondAttribute="trailing" constant="28" id="8iX-Xj-D6z"/>
+                            <constraint firstItem="lFC-lN-eFb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="QY1-E3-l5m"/>
+                            <constraint firstItem="Fy9-lU-lbw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hhu-eM-xhD"/>
+                            <constraint firstItem="Fy9-lU-lbw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="orJ-UT-KWl"/>
+                            <constraint firstAttribute="bottom" secondItem="Fy9-lU-lbw" secondAttribute="bottom" id="pdY-YH-70Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-map" width="341" height="612"/>
+    </resources>
+</document>
