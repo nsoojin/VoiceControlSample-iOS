@@ -8,8 +8,15 @@
 
 import UIKit
 
+internal enum JarvisState {
+    case preparing
+    case listening
+    case loading
+    case speaking(transcript: String)
+}
+
 internal protocol JarvisDelegate: AnyObject {
-    func jarvis(_ jarvis: Jarvis, didChangeState state: SpeechRecognizerState)
+    func jarvis(_ jarvis: Jarvis, didChangeState state: JarvisState)
     func jarvis(_ jarvis: Jarvis, didRecognizeText text: String)
     func jarvis(_ jarvis: Jarvis, didChangeAmplitude value: CGFloat)
     func jarvis(_ jarvis: Jarvis, didFailWithError error: Error)

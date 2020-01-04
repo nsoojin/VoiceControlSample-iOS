@@ -13,13 +13,13 @@ public final class VoiceControl: UIControl {
     internal var clovaAgentView: VoiceAgentView?
     
     private func startSpeechRecognizer() {
-        speechRecognizer = Jarvis()
-        speechRecognizer?.delegate = self
-        speechRecognizer?.start()
+        jarvis = MockJarvis()
+        jarvis?.delegate = self
+        jarvis?.start()
     }
     
     private func stopSpeechRecognizer() {
-        speechRecognizer = nil
+        jarvis = nil
     }
     
     override public var inputAccessoryView: UIView? {
@@ -48,7 +48,8 @@ public final class VoiceControl: UIControl {
         return didBecomeFirstResponder
     }
     
-    @discardableResult override public func resignFirstResponder() -> Bool {
+    @discardableResult
+    override public func resignFirstResponder() -> Bool {
         imageView.alpha = 1.0
         clovaAgentView = nil
         stopSpeechRecognizer()
@@ -92,7 +93,7 @@ public final class VoiceControl: UIControl {
         addTarget(self, action: #selector(triggerVoiceControl), for: .touchUpInside)
     }
 
-    @objc func triggerVoiceControl() {
+    @objc private func triggerVoiceControl() {
         if isFirstResponder {
             resignFirstResponder()
         } else {
@@ -112,7 +113,7 @@ public final class VoiceControl: UIControl {
         return CGSize(width: 72, height: 72)
     }
     
-    private var speechRecognizer: Jarvis?
+    private var jarvis: Jarvis?
     private let imageView = UIImageView()
     private let circleLayer = CAShapeLayer()
 }

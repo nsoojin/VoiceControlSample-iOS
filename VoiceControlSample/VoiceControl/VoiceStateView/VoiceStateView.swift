@@ -17,7 +17,7 @@ internal class VoiceStateView: UIView {
     let animationView = AnimationView(name: "voice")
     
     @discardableResult
-    internal func setState(_ state: State) -> Bool {
+    func setState(_ state: State) -> Bool {
         let isNextStateValid = stateMachine.canEnterState(state.classType())
         if isNextStateValid {
             self.state = state
@@ -27,7 +27,7 @@ internal class VoiceStateView: UIView {
         return isNextStateValid
     }
     
-    internal func amplify(with magnitude: Double) {
+    func amplify(with magnitude: Double) {
         stateMachine.update(deltaTime: magnitude)
     }
     
@@ -103,7 +103,7 @@ internal class VoiceStateView: UIView {
     }()
 }
 
-extension VoiceStateView {
+internal extension VoiceStateView {
     enum State {
         case attending, listening, detecting, processing, reporting
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F524064B23C09C7E00842103 /* MockJarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524064A23C09C7E00842103 /* MockJarvis.swift */; };
 		F556C78823C07987006A1441 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; };
 		F556C78923C07987006A1441 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F55ABB7623C0892900265469 /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F524064A23C09C7E00842103 /* MockJarvis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJarvis.swift; sourceTree = "<group>"; };
 		F556C75023C0430B006A1441 /* VoiceAgentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceAgentView.xib; sourceTree = "<group>"; };
 		F556C75123C0430D006A1441 /* VoiceAgentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAgentView.swift; sourceTree = "<group>"; };
 		F556C75523C04363006A1441 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				F581B79523C032B900E3615D /* Jarvis.swift */,
 				F581B79723C032C800E3615D /* JarvisDelegate.swift */,
+				F524064A23C09C7E00842103 /* MockJarvis.swift */,
 			);
 			path = Jarvis;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				F581B75123BF9A3800E3615D /* SceneDelegate.swift in Sources */,
 				F55ABB8123C0893C00265469 /* DetectingState.swift in Sources */,
 				F581B6E223BF7B9F00E3615D /* AppDelegate.swift in Sources */,
+				F524064B23C09C7E00842103 /* MockJarvis.swift in Sources */,
 				F55ABB8023C0893C00265469 /* ListeningState.swift in Sources */,
 				F55ABB8323C0893C00265469 /* ReportingState.swift in Sources */,
 				F55ABB7C23C0893900265469 /* VoiceStateView.swift in Sources */,

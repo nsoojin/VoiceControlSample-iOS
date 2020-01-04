@@ -11,7 +11,7 @@ import UIKit
 private let listeningStateDescription = "듣고 있어요"
 
 extension VoiceControl: JarvisDelegate {
-    func jarvis(_ jarvis: Jarvis, didChangeState state: SpeechRecognizerState) {
+    func jarvis(_ jarvis: Jarvis, didChangeState state: JarvisState) {
         switch state {
         case .preparing:
             print("attending")
