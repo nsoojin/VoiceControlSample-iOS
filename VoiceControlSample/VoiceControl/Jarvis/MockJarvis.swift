@@ -14,80 +14,85 @@ internal final class MockJarvis: Jarvis {
     
     func start() {
         DispatchQueue.global().async { [weak self] in
-            guard let self = self else { return }
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeState: .preparing)
-            }
+            self?.changeState(to: .preparing)
             usleep(0_500_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeState: .listening)
-            }
+            self?.changeState(to: .listening)
             usleep(5_000_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didRecognizeText: "판교")
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.8)
-            }
+            self?.didRecognize(text: "판교")
+            self?.changeAmplitude(to: 0.8)
             usleep(1_000_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.4)
-            }
+            self?.changeAmplitude(to: 0.4)
             usleep(0_200_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didRecognizeText: "판교 근처")
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.9)
-            }
+            self?.didRecognize(text: "판교 근처")
+            self?.changeAmplitude(to: 0.9)
             usleep(0_200_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didRecognizeText: "판교 근처 카페")
-                self.delegate?.jarvis(self, didChangeAmplitude: 1.0)
-            }
+            self?.didRecognize(text: "판교 근처 카페")
+            self?.changeAmplitude(to: 1.0)
             usleep(0_200_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.7)
-            }
+            self?.changeAmplitude(to: 0.7)
             usleep(0_200_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didRecognizeText: "판교 근처 카페 알려줘")
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.3)
-            }
+            self?.didRecognize(text: "판교 근처 카페 알려줘")
+            self?.changeAmplitude(to: 0.3)
             usleep(0_200_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeAmplitude: 0.1)
-            }
+            self?.changeAmplitude(to: 0.1)
             usleep(2_000_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeState: .loading)
-            }
+            self?.changeState(to: .loading)
             usleep(4_000_000)
             
             let response = "판교 근처 카페를 알려드리겠습니다."
-            let synthesizer = AVSpeechSynthesizer()
-            let utterance = AVSpeechUtterance(string: response)
-            utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
-            synthesizer.speak(utterance)
-            
-            DispatchQueue.main.sync {
-                self.delegate?.jarvis(self, didChangeState: .speaking(transcript: response))
-            }
+            self?.speak(response)
+            self?.changeState(to: .speaking(transcript: response))
             usleep(5_000_000)
             
-            DispatchQueue.main.sync {
-                self.delegate?.jarvisDidEndRecognizing(self)
-            }
+            self?.endRecognizing()
         }
     }
     
     func stop() {
-        
+        endRecognizing()
+    }
+    
+    private func changeState(to state: JarvisState) {
+        DispatchQueue.main.sync {
+            delegate?.jarvis(self, didChangeState: state)
+        }
+    }
+    
+    private func didRecognize(text: String) {
+        DispatchQueue.main.sync {
+            delegate?.jarvis(self, didRecognizeText: text)
+        }
+    }
+    
+    private func changeAmplitude(to value: CGFloat) {
+        DispatchQueue.main.sync {
+            delegate?.jarvis(self, didChangeAmplitude: value)
+        }
+    }
+    
+    private func endRecognizing() {
+        DispatchQueue.main.sync {
+            delegate?.jarvisDidEndRecognizing(self)
+        }
+    }
+    
+    private func speak(_ text: String) {
+        DispatchQueue.main.async {
+            print("speak \(text)")
+            let synthesizer = AVSpeechSynthesizer()
+            let utterance = AVSpeechUtterance(string: text)
+            utterance.voice = AVSpeechSynthesisVoice(language: "ko-KR")
+            synthesizer.speak(utterance)
+        }
     }
 }
