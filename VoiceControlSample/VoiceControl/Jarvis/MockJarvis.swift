@@ -23,24 +23,27 @@ internal final class MockJarvis: Jarvis {
             
             self?.didRecognize(text: "판교")
             self?.changeAmplitude(to: 0.8)
-            usleep(1_000_000)
+            usleep(1_200_000)
             
             self?.changeAmplitude(to: 0.4)
-            usleep(0_200_000)
+            usleep(0_400_000)
             
             self?.didRecognize(text: "판교 근처")
             self?.changeAmplitude(to: 0.9)
-            usleep(0_200_000)
+            usleep(1_100_000)
             
             self?.didRecognize(text: "판교 근처 카페")
             self?.changeAmplitude(to: 1.0)
-            usleep(0_200_000)
+            usleep(0_300_000)
             
-            self?.changeAmplitude(to: 0.7)
-            usleep(0_200_000)
+            self?.changeAmplitude(to: 0.5)
+            usleep(0_800_000)
             
             self?.didRecognize(text: "판교 근처 카페 알려줘")
-            self?.changeAmplitude(to: 0.3)
+            self?.changeAmplitude(to: 0.9)
+            usleep(1_500_000)
+            
+            self?.changeAmplitude(to: 0.4)
             usleep(0_200_000)
             
             self?.changeAmplitude(to: 0.1)
@@ -59,7 +62,7 @@ internal final class MockJarvis: Jarvis {
     }
     
     func stop() {
-        endRecognizing()
+        
     }
     
     private func changeState(to state: JarvisState) {

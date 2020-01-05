@@ -9,17 +9,11 @@
 import UIKit
 import GameplayKit
 
-class ReportingState: VoiceState {
+internal final class ReportingState: VoiceState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         
         animateReporting()
-    }
-    
-    private func animateReporting() {
-        stateView.animationView.currentProgress = 0.32
-        stateView.animationView.loopMode = .loop
-        stateView.animationView.play(fromProgress: 0.32, toProgress: 0.52)
     }
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
@@ -29,5 +23,11 @@ class ReportingState: VoiceState {
         default:
             return false
         }
+    }
+    
+    private func animateReporting() {
+        stateView.animationView.currentProgress = 0.32
+        stateView.animationView.loopMode = .loop
+        stateView.animationView.play(fromProgress: 0.32, toProgress: 0.52)
     }
 }

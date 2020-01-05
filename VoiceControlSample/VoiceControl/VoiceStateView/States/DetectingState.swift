@@ -9,9 +9,8 @@
 import UIKit
 import GameplayKit
 
-class DetectingState: VoiceState {
-    private static let animationKey: String = "DetectionAnimationKey"
-    var magnitude: CGFloat = 0.5 //A scale of 0 to 1
+internal final class DetectingState: VoiceState {
+    private(set) var magnitude: CGFloat = 0.5 //A scale of 0 to 1
     
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
@@ -25,6 +24,19 @@ class DetectingState: VoiceState {
         removeAnimation()
     }
     
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
+        switch stateClass {
+        case is ProcessingState.Type:
+            return true
+        default:
+            return false
+        }
+    }
+    
+    override func update(deltaTime seconds: TimeInterval) {
+        magnitude = CGFloat(seconds)
+    }
+    
     private func animateDetection() {
         stateView.dots.forEach { dot in
             let delay = Double(dot.tag - 1) * 0.05
@@ -32,6 +44,10 @@ class DetectingState: VoiceState {
                 self.amplify(dot)
             }
         }
+    }
+    
+    private func removeAnimation() {
+        stateView.dots.forEach { $0.layer.removeAnimation(forKey: DetectingState.animationKey) }
     }
     
     private func amplify(_ dot: UIView) {
@@ -48,29 +64,25 @@ class DetectingState: VoiceState {
         dot.layer.add(animation, forKey: DetectingState.animationKey)
     }
     
-    private func removeAnimation() {
-        stateView.dots.forEach { $0.layer.removeAnimation(forKey: DetectingState.animationKey) }
-    }
-    
-    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        switch stateClass {
-        case is ProcessingState.Type:
-            return true
-        default:
-            return false
+    private static let animationKey: String = "DetectionAnimationKey"
+}
+
+extension DetectingState: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            let dotsToAnimate = stateView.dots.filter { $0.layer.animation(forKey: DetectingState.animationKey) == nil }
+            dotsToAnimate.forEach { amplify($0) }
         }
     }
-    
-    override func update(deltaTime seconds: TimeInterval) {
-        magnitude = CGFloat(seconds)
-    }
-    
-    private func random(min: CGFloat, max: CGFloat) -> CGFloat {
+}
+
+private extension DetectingState {
+    func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return (CGFloat(arc4random()) / 0xFFFFFFFF) * (max - min) + min
     }
     
     //regularize to have distributed values from 1.5 to 2.5
-    private func regularized(_ magnitude: CGFloat) -> CGFloat {
+    func regularized(_ magnitude: CGFloat) -> CGFloat {
         var regularized = magnitude
         
         if regularized < 0 {
@@ -80,14 +92,5 @@ class DetectingState: VoiceState {
         }
         
         return 1.5 + regularized
-    }
-}
-
-extension DetectingState: CAAnimationDelegate {
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if flag {
-            let dotsToAnimate = stateView.dots.filter { $0.layer.animation(forKey: DetectingState.animationKey) == nil }
-            dotsToAnimate.forEach { amplify($0) }
-        }
     }
 }

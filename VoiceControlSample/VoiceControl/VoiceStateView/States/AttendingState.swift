@@ -9,7 +9,7 @@
 import UIKit
 import GameplayKit
 
-class AttendingState: VoiceState {
+internal final class AttendingState: VoiceState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         switch stateClass {
         case is ListeningState.Type:

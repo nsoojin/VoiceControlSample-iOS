@@ -22,16 +22,16 @@ public final class VoiceControl: UIControl {
         jarvis = nil
     }
     
-    override public var inputAccessoryView: UIView? {
+    public override var inputAccessoryView: UIView? {
         return clovaAgentView
     }
     
-    override public var canBecomeFirstResponder: Bool {
+    public override var canBecomeFirstResponder: Bool {
         return true
     }
     
     @discardableResult
-    override public func becomeFirstResponder() -> Bool {
+    public override func becomeFirstResponder() -> Bool {
         if isFirstResponder {
             return false
         }
@@ -49,14 +49,14 @@ public final class VoiceControl: UIControl {
     }
     
     @discardableResult
-    override public func resignFirstResponder() -> Bool {
+    public override func resignFirstResponder() -> Bool {
         imageView.alpha = 1.0
         clovaAgentView = nil
         stopSpeechRecognizer()
         return super.resignFirstResponder()
     }
     
-    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let hitTest = super.hitTest(point, with: event)
         
         if hitTest == nil, isFirstResponder {
@@ -78,8 +78,20 @@ public final class VoiceControl: UIControl {
         commonInit()
     }
     
-    override public func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         commonInit()
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        imageView.frame = bounds
+        circleLayer.path = UIBezierPath(ovalIn: bounds).cgPath
+        layer.mask = circleLayer
+    }
+    
+    public override var intrinsicContentSize: CGSize {
+        return CGSize(width: 72, height: 72)
     }
     
     private func commonInit() {
@@ -99,18 +111,6 @@ public final class VoiceControl: UIControl {
         } else {
             becomeFirstResponder()
         }
-    }
-    
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        
-        imageView.frame = bounds
-        circleLayer.path = UIBezierPath(ovalIn: bounds).cgPath
-        layer.mask = circleLayer
-    }
-    
-    override public var intrinsicContentSize: CGSize {
-        return CGSize(width: 72, height: 72)
     }
     
     private var jarvis: Jarvis?

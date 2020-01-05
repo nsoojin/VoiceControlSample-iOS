@@ -9,6 +9,8 @@
 import UIKit
 
 final internal class VoiceAgentView: UIView {
+    @IBOutlet internal weak var stateView: VoiceStateView?
+    
     var transcription: String? {
         get {
             transcriptionLabel?.text
@@ -53,7 +55,6 @@ final internal class VoiceAgentView: UIView {
         return NSAttributedString(string: originalString, attributes: attributes)
     }
     
-    @IBOutlet internal weak var stateView: VoiceStateView?
     @IBOutlet private weak var transcriptionLabel: UILabel?
     @IBOutlet private weak var topPaddingConstraint: NSLayoutConstraint?
     @IBOutlet private weak var topAnchorConstraint: NSLayoutConstraint?

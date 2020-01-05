@@ -13,6 +13,7 @@ import GameplayKit
 @IBDesignable
 internal class VoiceStateView: UIView {
     private(set) var state: State = .attending
+    private(set) var dots = [UIView]()
     let dotsContainerView = UIView()
     let animationView = AnimationView(name: "voice")
     
@@ -91,7 +92,6 @@ internal class VoiceStateView: UIView {
         }
     }
     
-    private(set) var dots = [UIView]()
     private lazy var stateMachine: GKStateMachine = {
         return GKStateMachine(states: [
             AttendingState(statusView: self),

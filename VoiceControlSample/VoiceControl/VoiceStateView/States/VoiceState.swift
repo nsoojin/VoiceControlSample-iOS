@@ -9,7 +9,7 @@
 import UIKit
 import GameplayKit
 
-class VoiceState: GKState {
+internal class VoiceState: GKState {
     unowned let stateView: VoiceStateView
     
     init(statusView: VoiceStateView) {

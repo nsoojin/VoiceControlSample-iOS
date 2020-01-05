@@ -9,9 +9,7 @@
 import UIKit
 import GameplayKit
 
-class ListeningState: VoiceState {
-    private static let animationKey: String = "BounceAnimationKey"
-    
+internal final class ListeningState: VoiceState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         
@@ -22,6 +20,15 @@ class ListeningState: VoiceState {
         super.willExit(to: nextState)
         
         removeAnimation()
+    }
+    
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
+        switch stateClass {
+        case is AttendingState.Type, is DetectingState.Type:
+            return true
+        default:
+            return false
+        }
     }
     
     private func animateBounce() {
@@ -49,12 +56,5 @@ class ListeningState: VoiceState {
         stateView.dots.forEach { $0.layer.removeAnimation(forKey: ListeningState.animationKey) }
     }
     
-    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        switch stateClass {
-        case is AttendingState.Type, is DetectingState.Type:
-            return true
-        default:
-            return false
-        }
-    }
+    private static let animationKey: String = "BounceAnimationKey"
 }
