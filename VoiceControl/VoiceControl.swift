@@ -36,7 +36,7 @@ public final class VoiceControl: UIControl {
             return false
         }
         
-        clovaAgentView = UIView.makeFromNib(class: VoiceAgentView.self, owner: nil)
+        clovaAgentView = UIView.makeFromNib(VoiceAgentView.self, owner: nil)
         
         let didBecomeFirstResponder = super.becomeFirstResponder()
         if didBecomeFirstResponder {

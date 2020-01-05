@@ -3,44 +3,60 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F524064B23C09C7E00842103 /* MockJarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524064A23C09C7E00842103 /* MockJarvis.swift */; };
-		F556C78823C07987006A1441 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; };
-		F556C78923C07987006A1441 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F55ABB7623C0892900265469 /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */; };
-		F55ABB7723C0892B00265469 /* VoiceControl+JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */; };
-		F55ABB7823C0893100265469 /* Jarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79523C032B900E3615D /* Jarvis.swift */; };
-		F55ABB7923C0893100265469 /* JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79723C032C800E3615D /* JarvisDelegate.swift */; };
-		F55ABB7A23C0893400265469 /* VoiceAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75123C0430D006A1441 /* VoiceAgentView.swift */; };
-		F55ABB7B23C0893400265469 /* VoiceAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F556C75023C0430B006A1441 /* VoiceAgentView.xib */; };
-		F55ABB7C23C0893900265469 /* VoiceStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70623BF7C0B00E3615D /* VoiceStateView.swift */; };
-		F55ABB7D23C0893900265469 /* voice.json in Resources */ = {isa = PBXBuildFile; fileRef = F581B70E23BF7C0C00E3615D /* voice.json */; };
-		F55ABB7E23C0893C00265469 /* VoiceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70C23BF7C0B00E3615D /* VoiceState.swift */; };
-		F55ABB7F23C0893C00265469 /* AttendingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70823BF7C0B00E3615D /* AttendingState.swift */; };
-		F55ABB8023C0893C00265469 /* ListeningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70923BF7C0B00E3615D /* ListeningState.swift */; };
-		F55ABB8123C0893C00265469 /* DetectingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70A23BF7C0B00E3615D /* DetectingState.swift */; };
-		F55ABB8223C0893C00265469 /* ProcessingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70B23BF7C0B00E3615D /* ProcessingState.swift */; };
-		F55ABB8323C0893C00265469 /* ReportingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70D23BF7C0B00E3615D /* ReportingState.swift */; };
-		F55ABB8423C0893F00265469 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75523C04363006A1441 /* Extensions.swift */; };
 		F55ABB8523C0894C00265469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F581B6EA23BF7BA500E3615D /* Assets.xcassets */; };
 		F581B6E223BF7B9F00E3615D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6E123BF7B9F00E3615D /* AppDelegate.swift */; };
 		F581B6E923BF7B9F00E3615D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F581B6E723BF7B9F00E3615D /* Main.storyboard */; };
 		F581B6EE23BF7BA500E3615D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F581B6EC23BF7BA500E3615D /* LaunchScreen.storyboard */; };
 		F581B75123BF9A3800E3615D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B75023BF9A3800E3615D /* SceneDelegate.swift */; };
 		F581B77323BFA27600E3615D /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B77223BFA27600E3615D /* MyViewController.swift */; };
+		F590256023C1F438003CCB1C /* VoiceControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F590255E23C1F438003CCB1C /* VoiceControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F590256423C1F4CB003CCB1C /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */; };
+		F590256523C1F4CB003CCB1C /* VoiceControl+JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */; };
+		F590256723C1F4D8003CCB1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F590256623C1F4D8003CCB1C /* Assets.xcassets */; };
+		F590256823C1F505003CCB1C /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; platformFilter = ios; };
+		F590256923C1F51A003CCB1C /* VoiceControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F590255C23C1F438003CCB1C /* VoiceControl.framework */; };
+		F590256A23C1F51A003CCB1C /* VoiceControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F590255C23C1F438003CCB1C /* VoiceControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F590256E23C1F527003CCB1C /* Jarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79523C032B900E3615D /* Jarvis.swift */; };
+		F590256F23C1F527003CCB1C /* JarvisDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B79723C032C800E3615D /* JarvisDelegate.swift */; };
+		F590257023C1F527003CCB1C /* MockJarvis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F524064A23C09C7E00842103 /* MockJarvis.swift */; };
+		F590257123C1F52B003CCB1C /* VoiceAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75123C0430D006A1441 /* VoiceAgentView.swift */; };
+		F590257223C1F52B003CCB1C /* VoiceAgentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F556C75023C0430B006A1441 /* VoiceAgentView.xib */; };
+		F590257323C1F52F003CCB1C /* VoiceStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70623BF7C0B00E3615D /* VoiceStateView.swift */; };
+		F590257423C1F52F003CCB1C /* voice.json in Resources */ = {isa = PBXBuildFile; fileRef = F581B70E23BF7C0C00E3615D /* voice.json */; };
+		F590257523C1F532003CCB1C /* VoiceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70C23BF7C0B00E3615D /* VoiceState.swift */; };
+		F590257623C1F532003CCB1C /* AttendingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70823BF7C0B00E3615D /* AttendingState.swift */; };
+		F590257723C1F532003CCB1C /* ListeningState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70923BF7C0B00E3615D /* ListeningState.swift */; };
+		F590257823C1F532003CCB1C /* DetectingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70A23BF7C0B00E3615D /* DetectingState.swift */; };
+		F590257923C1F532003CCB1C /* ProcessingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70B23BF7C0B00E3615D /* ProcessingState.swift */; };
+		F590257A23C1F532003CCB1C /* ReportingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B70D23BF7C0B00E3615D /* ReportingState.swift */; };
+		F590257B23C1F538003CCB1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556C75523C04363006A1441 /* Extensions.swift */; };
+		F590257C23C1F7DB003CCB1C /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; };
+		F590257D23C1F7DB003CCB1C /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F556C78223C0791A006A1441 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F590256B23C1F51A003CCB1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F581B6D623BF7B9F00E3615D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F590255B23C1F438003CCB1C;
+			remoteInfo = VoiceControl;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		F556C78123C0776F006A1441 /* Embed Frameworks */ = {
+		F590256D23C1F51A003CCB1C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F556C78923C07987006A1441 /* Lottie.framework in Embed Frameworks */,
+				F590256A23C1F51A003CCB1C /* VoiceControl.framework in Embed Frameworks */,
+				F590257D23C1F7DB003CCB1C /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +89,10 @@
 		F581B79523C032B900E3615D /* Jarvis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jarvis.swift; sourceTree = "<group>"; };
 		F581B79723C032C800E3615D /* JarvisDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarvisDelegate.swift; sourceTree = "<group>"; };
 		F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VoiceControl+JarvisDelegate.swift"; sourceTree = "<group>"; };
+		F590255C23C1F438003CCB1C /* VoiceControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VoiceControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F590255E23C1F438003CCB1C /* VoiceControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoiceControl.h; sourceTree = "<group>"; };
+		F590255F23C1F438003CCB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F590256623C1F4D8003CCB1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,26 +100,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F556C78823C07987006A1441 /* Lottie.framework in Frameworks */,
+				F590256923C1F51A003CCB1C /* VoiceControl.framework in Frameworks */,
+				F590257C23C1F7DB003CCB1C /* Lottie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F590255923C1F438003CCB1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F590256823C1F505003CCB1C /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F556C75D23C075AB006A1441 /* VoiceControl */ = {
-			isa = PBXGroup;
-			children = (
-				F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */,
-				F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */,
-				F581B79423C0329C00E3615D /* Jarvis */,
-				F581B72323BF90E800E3615D /* VoiceAgentView */,
-				F581B70523BF7C0B00E3615D /* VoiceStateView */,
-				F556C77E23C0770D006A1441 /* Extensions */,
-			);
-			path = VoiceControl;
-			sourceTree = "<group>";
-		};
 		F556C77E23C0770D006A1441 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				F581B6E023BF7B9F00E3615D /* VoiceControlSample */,
+				F590255D23C1F438003CCB1C /* VoiceControl */,
 				F581B6DF23BF7B9F00E3615D /* Products */,
 				F581B72623BF947600E3615D /* Frameworks */,
 			);
@@ -121,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F581B6DE23BF7B9F00E3615D /* VoiceControlSample.app */,
+				F590255C23C1F438003CCB1C /* VoiceControl.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +150,6 @@
 				F581B75023BF9A3800E3615D /* SceneDelegate.swift */,
 				F581B77223BFA27600E3615D /* MyViewController.swift */,
 				F581B6EF23BF7BA500E3615D /* Info.plist */,
-				F556C75D23C075AB006A1441 /* VoiceControl */,
 				F581B6F723BF7BD300E3615D /* Resources */,
 			);
 			path = VoiceControlSample;
@@ -198,7 +215,34 @@
 			path = Jarvis;
 			sourceTree = "<group>";
 		};
+		F590255D23C1F438003CCB1C /* VoiceControl */ = {
+			isa = PBXGroup;
+			children = (
+				F581B6FB23BF7C0B00E3615D /* VoiceControl.swift */,
+				F581B79923C035C900E3615D /* VoiceControl+JarvisDelegate.swift */,
+				F581B79423C0329C00E3615D /* Jarvis */,
+				F581B72323BF90E800E3615D /* VoiceAgentView */,
+				F581B70523BF7C0B00E3615D /* VoiceStateView */,
+				F556C77E23C0770D006A1441 /* Extensions */,
+				F590255E23C1F438003CCB1C /* VoiceControl.h */,
+				F590255F23C1F438003CCB1C /* Info.plist */,
+				F590256623C1F4D8003CCB1C /* Assets.xcassets */,
+			);
+			path = VoiceControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F590255723C1F438003CCB1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F590256023C1F438003CCB1C /* VoiceControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F581B6DD23BF7B9F00E3615D /* VoiceControlSample */ = {
@@ -208,16 +252,35 @@
 				F581B6DA23BF7B9F00E3615D /* Sources */,
 				F581B6DB23BF7B9F00E3615D /* Frameworks */,
 				F581B6DC23BF7B9F00E3615D /* Resources */,
-				F556C78123C0776F006A1441 /* Embed Frameworks */,
+				F590256D23C1F51A003CCB1C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F590256C23C1F51A003CCB1C /* PBXTargetDependency */,
 			);
 			name = VoiceControlSample;
 			productName = SpeechInput;
 			productReference = F581B6DE23BF7B9F00E3615D /* VoiceControlSample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F590255B23C1F438003CCB1C /* VoiceControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F590256323C1F438003CCB1C /* Build configuration list for PBXNativeTarget "VoiceControl" */;
+			buildPhases = (
+				F590255723C1F438003CCB1C /* Headers */,
+				F590255823C1F438003CCB1C /* Sources */,
+				F590255923C1F438003CCB1C /* Frameworks */,
+				F590255A23C1F438003CCB1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceControl;
+			productName = VoiceControl;
+			productReference = F590255C23C1F438003CCB1C /* VoiceControl.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -230,6 +293,9 @@
 				ORGANIZATIONNAME = "Soojin Ro";
 				TargetAttributes = {
 					F581B6DD23BF7B9F00E3615D = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					F590255B23C1F438003CCB1C = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -248,6 +314,7 @@
 			projectRoot = "";
 			targets = (
 				F581B6DD23BF7B9F00E3615D /* VoiceControlSample */,
+				F590255B23C1F438003CCB1C /* VoiceControl */,
 			);
 		};
 /* End PBXProject section */
@@ -257,11 +324,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55ABB7D23C0893900265469 /* voice.json in Resources */,
 				F581B6EE23BF7BA500E3615D /* LaunchScreen.storyboard in Resources */,
 				F581B6E923BF7B9F00E3615D /* Main.storyboard in Resources */,
-				F55ABB7B23C0893400265469 /* VoiceAgentView.xib in Resources */,
 				F55ABB8523C0894C00265469 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F590255A23C1F438003CCB1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F590256723C1F4D8003CCB1C /* Assets.xcassets in Resources */,
+				F590257423C1F52F003CCB1C /* voice.json in Resources */,
+				F590257223C1F52B003CCB1C /* VoiceAgentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,27 +347,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55ABB7723C0892B00265469 /* VoiceControl+JarvisDelegate.swift in Sources */,
-				F55ABB7623C0892900265469 /* VoiceControl.swift in Sources */,
-				F55ABB7923C0893100265469 /* JarvisDelegate.swift in Sources */,
 				F581B75123BF9A3800E3615D /* SceneDelegate.swift in Sources */,
-				F55ABB8123C0893C00265469 /* DetectingState.swift in Sources */,
 				F581B6E223BF7B9F00E3615D /* AppDelegate.swift in Sources */,
-				F524064B23C09C7E00842103 /* MockJarvis.swift in Sources */,
-				F55ABB8023C0893C00265469 /* ListeningState.swift in Sources */,
-				F55ABB8323C0893C00265469 /* ReportingState.swift in Sources */,
-				F55ABB7C23C0893900265469 /* VoiceStateView.swift in Sources */,
-				F55ABB7E23C0893C00265469 /* VoiceState.swift in Sources */,
-				F55ABB7F23C0893C00265469 /* AttendingState.swift in Sources */,
-				F55ABB8423C0893F00265469 /* Extensions.swift in Sources */,
 				F581B77323BFA27600E3615D /* MyViewController.swift in Sources */,
-				F55ABB7823C0893100265469 /* Jarvis.swift in Sources */,
-				F55ABB8223C0893C00265469 /* ProcessingState.swift in Sources */,
-				F55ABB7A23C0893400265469 /* VoiceAgentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F590255823C1F438003CCB1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F590256E23C1F527003CCB1C /* Jarvis.swift in Sources */,
+				F590256F23C1F527003CCB1C /* JarvisDelegate.swift in Sources */,
+				F590257523C1F532003CCB1C /* VoiceState.swift in Sources */,
+				F590257723C1F532003CCB1C /* ListeningState.swift in Sources */,
+				F590257323C1F52F003CCB1C /* VoiceStateView.swift in Sources */,
+				F590256523C1F4CB003CCB1C /* VoiceControl+JarvisDelegate.swift in Sources */,
+				F590257023C1F527003CCB1C /* MockJarvis.swift in Sources */,
+				F590256423C1F4CB003CCB1C /* VoiceControl.swift in Sources */,
+				F590257823C1F532003CCB1C /* DetectingState.swift in Sources */,
+				F590257623C1F532003CCB1C /* AttendingState.swift in Sources */,
+				F590257923C1F532003CCB1C /* ProcessingState.swift in Sources */,
+				F590257A23C1F532003CCB1C /* ReportingState.swift in Sources */,
+				F590257123C1F52B003CCB1C /* VoiceAgentView.swift in Sources */,
+				F590257B23C1F538003CCB1C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F590256C23C1F51A003CCB1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F590255B23C1F438003CCB1C /* VoiceControl */;
+			targetProxy = F590256B23C1F51A003CCB1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F581B6E723BF7B9F00E3615D /* Main.storyboard */ = {
@@ -474,6 +564,72 @@
 			};
 			name = Release;
 		};
+		F590256123C1F438003CCB1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VoiceControl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(BUILD_PRODUCTS_DIR)/Lottie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.VoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F590256223C1F438003CCB1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VoiceControl/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(BUILD_PRODUCTS_DIR)/Lottie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.VoiceControl;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +647,15 @@
 			buildConfigurations = (
 				F581B6F323BF7BA500E3615D /* Debug */,
 				F581B6F423BF7BA500E3615D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F590256323C1F438003CCB1C /* Build configuration list for PBXNativeTarget "VoiceControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F590256123C1F438003CCB1C /* Debug */,
+				F590256223C1F438003CCB1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

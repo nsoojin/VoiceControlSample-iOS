@@ -84,7 +84,7 @@ internal final class MockJarvis: Jarvis {
     }
     
     private func endRecognizing() {
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             delegate?.jarvisDidEndRecognizing(self)
         }
     }

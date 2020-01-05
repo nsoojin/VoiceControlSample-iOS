@@ -37,8 +37,8 @@ internal extension Optional where Wrapped: Collection {
 }
 
 internal extension UIView {
-    static func makeFromNib<T: UIView>(class: T.Type, owner: Any?) -> T {
-        guard let view = Bundle.main.loadNibNamed(T.className, owner: owner, options: nil)?.first as? T else {
+    static func makeFromNib<T: UIView>(_ type: T.Type, owner: Any?) -> T {
+        guard let view = Bundle(for: type).loadNibNamed(T.className, owner: owner, options: nil)?.first as? T else {
             fatalError("Nib named \(T.className) expects the root to be of type \(self)")
         }
         
