@@ -133,27 +133,26 @@ extension VoiceControl: JarvisDelegate {
         case .preparing:
             print("attending")
             clovaAgentView?.stateView?.setState(.attending)
-        case .listening:
-            print("listening")
+        case .detecting:
+            print("detecting")
             clovaAgentView?.transcription = listeningStateDescription
-            clovaAgentView?.stateView?.setState(.listening)
+            clovaAgentView?.stateView?.setState(.detecting)
         case .loading:
             print("processing")
             clovaAgentView?.transcription = nil
             clovaAgentView?.stateView?.setState(.processing)
         case .speaking(let transcript):
             print("reporting")
-            clovaAgentView?.transcription = nil
             clovaAgentView?.stateView?.setState(.reporting)
             clovaAgentView?.transcription = transcript
         }
     }
     
     func jarvis(_ jarvis: Jarvis, didRecognizeText text: String) {
-        print("detecting")
-        clovaAgentView?.stateView?.setState(.detecting)
+        print("listening")
+        clovaAgentView?.stateView?.setState(.listening)
         
-        if clovaAgentView?.stateView?.state == .detecting {
+        if clovaAgentView?.stateView?.state == .listening {
             clovaAgentView?.transcription = text
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 internal enum JarvisState {
     case preparing
-    case listening
+    case detecting
     case loading
     case speaking(transcript: String)
 }

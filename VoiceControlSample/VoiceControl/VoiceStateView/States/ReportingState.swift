@@ -18,7 +18,7 @@ internal final class ReportingState: VoiceState {
     
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         switch stateClass {
-        case is AttendingState.Type:
+        case is AttendingState.Type, is DetectingState.Type:
             return true
         default:
             return false

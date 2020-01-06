@@ -11,11 +11,6 @@ import GameplayKit
 
 internal final class AttendingState: VoiceState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        switch stateClass {
-        case is ListeningState.Type:
-            return true
-        default:
-            return false
-        }
+        return stateClass is DetectingState.Type
     }
 }

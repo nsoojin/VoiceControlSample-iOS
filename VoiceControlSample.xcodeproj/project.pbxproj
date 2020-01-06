@@ -160,8 +160,8 @@
 			children = (
 				F581B70C23BF7C0B00E3615D /* VoiceState.swift */,
 				F581B70823BF7C0B00E3615D /* AttendingState.swift */,
-				F581B70923BF7C0B00E3615D /* ListeningState.swift */,
 				F581B70A23BF7C0B00E3615D /* DetectingState.swift */,
+				F581B70923BF7C0B00E3615D /* ListeningState.swift */,
 				F581B70B23BF7C0B00E3615D /* ProcessingState.swift */,
 				F581B70D23BF7C0B00E3615D /* ReportingState.swift */,
 			);

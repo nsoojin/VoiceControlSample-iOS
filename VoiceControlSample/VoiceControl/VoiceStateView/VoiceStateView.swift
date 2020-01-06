@@ -95,8 +95,8 @@ internal class VoiceStateView: UIView {
     private lazy var stateMachine: GKStateMachine = {
         return GKStateMachine(states: [
             AttendingState(statusView: self),
-            ListeningState(statusView: self),
             DetectingState(statusView: self),
+            ListeningState(statusView: self),
             ProcessingState(statusView: self),
             ReportingState(statusView: self)
         ])
@@ -105,16 +105,16 @@ internal class VoiceStateView: UIView {
 
 internal extension VoiceStateView {
     enum State {
-        case attending, listening, detecting, processing, reporting
+        case attending, detecting, listening, processing, reporting
         
         func classType() -> AnyClass {
             switch self {
             case .attending:
                 return AttendingState.self
-            case .listening:
-                return ListeningState.self
             case .detecting:
                 return DetectingState.self
+            case .listening:
+                return ListeningState.self
             case .processing:
                 return ProcessingState.self
             case .reporting:

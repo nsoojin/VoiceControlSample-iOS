@@ -18,7 +18,7 @@ internal final class MockJarvis: Jarvis {
             self?.changeState(to: .preparing)
             usleep(0_500_000)
             
-            self?.changeState(to: .listening)
+            self?.changeState(to: .detecting)
             usleep(5_000_000)
             
             self?.didRecognize(text: "판교")
