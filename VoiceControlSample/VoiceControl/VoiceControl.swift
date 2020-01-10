@@ -12,7 +12,7 @@ import UIKit
 public final class VoiceControl: UIControl {
     
     public override var inputAccessoryView: UIView? {
-        return clovaAgentView
+        return voiceAgentView
     }
     
     public override var canBecomeFirstResponder: Bool {
@@ -25,12 +25,12 @@ public final class VoiceControl: UIControl {
             return false
         }
         
-        clovaAgentView = UIView.makeFromNib(class: VoiceAgentView.self, owner: nil)
+        voiceAgentView = UIView.makeFromNib(class: VoiceAgentView.self, owner: nil)
         
         let didBecomeFirstResponder = super.becomeFirstResponder()
         if didBecomeFirstResponder {
             imageView.alpha = 0.3
-            clovaAgentView?.transcription = nil
+            voiceAgentView?.transcription = nil
             startSpeechRecognizer()
         }
         
@@ -40,7 +40,7 @@ public final class VoiceControl: UIControl {
     @discardableResult
     public override func resignFirstResponder() -> Bool {
         imageView.alpha = 1.0
-        clovaAgentView = nil
+        voiceAgentView = nil
         stopSpeechRecognizer()
         return super.resignFirstResponder()
     }
@@ -113,14 +113,14 @@ public final class VoiceControl: UIControl {
     }
     
     private func hasRecognizedText() -> Bool {
-        if let transcription = clovaAgentView?.transcription {
+        if let transcription = voiceAgentView?.transcription {
             return transcription != listeningStateDescription
         }
         
         return false
     }
     
-    private var clovaAgentView: VoiceAgentView?
+    private var voiceAgentView: VoiceAgentView?
     private var jarvis: Jarvis?
     private let imageView = UIImageView()
     private let circleLayer = CAShapeLayer()
@@ -132,33 +132,33 @@ extension VoiceControl: JarvisDelegate {
         switch state {
         case .preparing:
             print("attending")
-            clovaAgentView?.stateView?.setState(.attending)
+            voiceAgentView?.stateView?.setState(.attending)
         case .detecting:
             print("detecting")
-            clovaAgentView?.transcription = listeningStateDescription
-            clovaAgentView?.stateView?.setState(.detecting)
+            voiceAgentView?.transcription = listeningStateDescription
+            voiceAgentView?.stateView?.setState(.detecting)
         case .loading:
             print("processing")
-            clovaAgentView?.transcription = nil
-            clovaAgentView?.stateView?.setState(.processing)
+            voiceAgentView?.transcription = nil
+            voiceAgentView?.stateView?.setState(.processing)
         case .speaking(let transcript):
             print("reporting")
-            clovaAgentView?.stateView?.setState(.reporting)
-            clovaAgentView?.transcription = transcript
+            voiceAgentView?.stateView?.setState(.reporting)
+            voiceAgentView?.transcription = transcript
         }
     }
     
     func jarvis(_ jarvis: Jarvis, didRecognizeText text: String) {
         print("listening")
-        clovaAgentView?.stateView?.setState(.listening)
+        voiceAgentView?.stateView?.setState(.listening)
         
-        if clovaAgentView?.stateView?.state == .listening {
-            clovaAgentView?.transcription = text
+        if voiceAgentView?.stateView?.state == .listening {
+            voiceAgentView?.transcription = text
         }
     }
     
     func jarvis(_ jarvis: Jarvis, didChangeAmplitude value: CGFloat) {
-        clovaAgentView?.stateView?.amplify(with: Double(value))
+        voiceAgentView?.stateView?.amplify(with: Double(value))
     }
     
     func jarvis(_ jarvis: Jarvis, didFailWithError error: Error) {
@@ -166,8 +166,8 @@ extension VoiceControl: JarvisDelegate {
     }
     
     func jarvisDidEndRecognizing(_ jarvis: Jarvis) {
-        clovaAgentView?.transcription = nil
-        clovaAgentView?.stateView?.setState(.attending)
+        voiceAgentView?.transcription = nil
+        voiceAgentView?.stateView?.setState(.attending)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.resignFirstResponder()
         }
